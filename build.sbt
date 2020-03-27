@@ -23,7 +23,7 @@ lazy val root = (project in file("."))
   )
 
 scalacOptions in console += "-Ywarn-unused:-imports,_"
-initialCommands in console :="""
+initialCommands in console := """
 import collection.JavaConverters._
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 import org.apache.spark.sql.types._
