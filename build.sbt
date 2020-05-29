@@ -1,8 +1,8 @@
 import Dependencies._
 import Config._
 
-ThisBuild / scalaVersion     := "2.11.2"
-ThisBuild / sparkVersion     := "2.4.4"
+ThisBuild / scalaVersion     := "2.11.12"
+ThisBuild / sparkVersion     := "2.4.5"
 ThisBuild / hadoopVersion    := "2.9.2"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
