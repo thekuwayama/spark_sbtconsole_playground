@@ -8,7 +8,7 @@ This is my sbt console playground for [Apache Spark](https://spark.apache.org/).
 It has preloaded the follows:
 
 - spark: `org.apache.spark.sql.SparkSession`
-- ds: `org.apache.spark.sql.Dataset[Row]`
+- df: `org.apache.spark.sql.DataFrame`
 
 ```bash
 $ sbt console
@@ -16,14 +16,14 @@ $ sbt console
 scala> spark
 res0: org.apache.spark.sql.SparkSession = org.apache.spark.sql.SparkSession@xxxxxxxx
 
-scala> ds
-res1: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [binary: binary, bool: boolean ... 9 more fields]
+scala> df
+res1: org.apache.spark.sql.DataFrame = [byte: tinyint, short: smallint ... 14 more fields]
 
-scala> ds.show
+scala> df.show
 ...
-+----------+----+----+------+-----+---+----+----+-----+------+--------------------+
-|    binary|bool|byte|double|float|int|long|null|short|string|           timestamp|
-+----------+----+----+------+-----+---+----+----+-----+------+--------------------+
-|[00 01 02]|true| 123|  4.56| 7.89|123| 456|null|  789|   abc|2020-01-01 12:34:...|
-+----------+----+----+------+-----+---+----+----+-----+------+--------------------+
++----+-----+----------+-------------------+-----+------+-------+------------+-------+-------+-------------------+----------+--------------------+--------------------+--------------------+----+
+|byte|short|   integer|               long|float|double|decimal|      string| binary|boolean|          timestamp|      date|               array|                 map|              struct|null|
++----+-----+----------+-------------------+-----+------+-------+------------+-------+-------+-------------------+----------+--------------------+--------------------+--------------------+----+
+| 127|32767|2147483647|9223372036854775807|  1.1|   1.2|    1.3|ThisIsString|[01 02]|   true|2020-12-31 21:34:56|2020-12-31|[This, is, String...|[ThisIsKey -> Thi...|[StringValue1, St...|null|
++----+-----+----------+-------------------+-----+------+-------+------------+-------+-------+-------------------+----------+--------------------+--------------------+--------------------+----+
 ```
