@@ -43,6 +43,7 @@ import java.sql.{Date, Timestamp}
 import cats.implicits._
 import eu.timepit.refined.auto._
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
+import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 import scalikejdbc._
 

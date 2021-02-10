@@ -1,6 +1,7 @@
 .metals/*
 target
 project/*
+bloop.sbt
 !project/*.sbt
 !project/*.scala
 !project/*.properties
